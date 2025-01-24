@@ -1,4 +1,4 @@
-import{_ as r,b as e,o as s,c as o,j as a,d as t}from"./index-Cs4GimgH.js";const c=`# 文档\r
+import{_ as r,b as e,o as s,c as o,j as a,d as t}from"./index-BusHnwnw.js";const c=`# 文档\r
 ## API\r
 ### 登录\r
 \r

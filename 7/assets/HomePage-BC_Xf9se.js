@@ -1,1 +1,0 @@
-import{_ as a,o,c as s,a as t}from"./index-Cs4GimgH.js";const c={},r={class:"area"};function n(_,e){return o(),s("div",r,e[0]||(e[0]=[t("h1",null,"暂定主页",-1)]))}const f=a(c,[["render",n],["__scopeId","data-v-063ed45f"]]);export{f as default};
