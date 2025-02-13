@@ -1,4 +1,4 @@
-import{_ as e,g as s,f as t,o as a,c as o,x as c,u as p}from"./index-DOdZPFRv.js";const i=`# 文档\r
+import{_ as e,g as s,h as t,o as a,c as o,y as c,u as p}from"./index-WQHIRrcV.js";const i=`# 文档\r
 ## API\r
 ### 登录\r
 \r
