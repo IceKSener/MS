@@ -1,4 +1,4 @@
-import{_ as e,g as t,i as o,o as s,c as a,y as i,u as c}from"./index-TT0sw5nX.js";const p=`# API文档\r
+import{_ as e,g as t,i as o,o as s,c as a,y as i,u as c}from"./index-Cc6Mg8O-.js";const p=`# API文档\r
 \r
 ## 核心接口\r
 \r
@@ -670,4 +670,4 @@ Authorization: Bearer <your_token>\r
   \`\`\`\r
 \r
 \r
-- **IntegrityError**: 在数据库操作中出现完整性错误（如唯一约束冲突时），会回滚事务并抛出错误信息。`,u={class:"area"},d={__name:"DevDoc",setup(_){return t().proxy.conifg,(n,l)=>{const r=o("Markdown");return s(),a("div",u,[i(r,{class:"md",md:c(p),theme:n.config.settings.theme},null,8,["md","theme"])])}}},h=e(d,[["__scopeId","data-v-952461ad"]]);export{h as default};
+- **IntegrityError**: 在数据库操作中出现完整性错误（如唯一约束冲突时），会回滚事务并抛出错误信息。`,u={class:"area"},d={__name:"DevDoc",setup(_){return t().proxy.conifg,(n,l)=>{const r=o("Markdown");return s(),a("div",u,[i(r,{class:"md",md:c(p),theme:n.config.settings.theme},null,8,["md","theme"])])}}},h=e(d,[["__scopeId","data-v-af514a8c"]]);export{h as default};
