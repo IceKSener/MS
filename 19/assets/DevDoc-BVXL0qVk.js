@@ -1,4 +1,4 @@
-import{_ as e,g as t,i as o,o as s,c as a,B as i,u as p}from"./index-CcUAXEOT.js";const u=`# API文档\r
+import{_ as e,g as t,i as o,o as s,c as a,B as i,u as p}from"./index-BBKhJtq8.js";const u=`# API文档\r
 \r
 ## 核心接口\r
 \r
