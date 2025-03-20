@@ -1,0 +1,1 @@
+import{_ as r,c as o,o as t,a}from"./index-Cqpz_JcA.js";const c={data(){return{iframeSrc:"./kgshow/GraphExplorer.html"}}},s={class:"iframe-container"},n=["src"];function _(i,d,f,p,e,l){return t(),o("div",s,[a("iframe",{src:e.iframeSrc,frameborder:"0",width:"100%",height:"100%"},null,8,n)])}const h=r(c,[["render",_],["__scopeId","data-v-ecf8db40"]]);export{h as default};

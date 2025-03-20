@@ -1,0 +1,139 @@
+{
+    "categories": {
+      "person": "人物",
+      "movie": "电影"
+    },
+    "data": {
+      "nodes": [
+        {
+          "label": "重庆森林",
+          "value": 4,
+          "id": 1,
+          "categories": [
+            "movie"
+          ],
+          "info": "重庆森林是王家卫执导的一部充满诗意与迷离氛围的电影，讲述了两个关于爱情与孤独的故事，展现了都市人在喧嚣中寻找情感慰藉的迷茫与渴望。"
+        },
+        {
+          "label": "花样年华",
+          "value": 8,
+          "id": 2,
+          "categories": [
+            "movie"
+          ],
+          "info": "以梁朝伟和张曼玉的表演为核心，展现了一段隐忍而美丽的爱情。"
+        },
+        {
+          "label": "旺角卡门",
+          "value": 8,
+          "id": 3,
+          "categories": [
+            "movie"
+          ],
+          "info": "王家卫的导演处女作，是一部带有黑帮题材的犯罪剧情片。"
+        },
+        {
+          "label": "阿飞正传",
+          "value": 4,
+          "id": 4,
+          "categories": [
+            "movie"
+          ],
+          "info": "讲述了一个关于迷失、成长和孤独的故事，张国荣饰演的浪子角色成为经典。"
+        },
+        {
+          "label": "一代宗师",
+          "value": 6,
+          "id": 5,
+          "categories": [
+            "movie"
+          ],
+          "info": "结合武侠与哲学，展现了叶问和其他武林人物的内心世界。"
+        },
+        {
+          "label": "繁花",
+          "value": 2,
+          "id": 6,
+          "categories": [
+            "movie"
+          ],
+          "info": "以20世纪90年代的上海为背景，展现了那个时代的繁华与人物命运。"
+        },
+        {
+          "label": "东邪西毒",
+          "value": 3,
+          "id": 7,
+          "categories": [
+            "movie"
+          ],
+          "info": "对传统武侠的重新解构，充满哲学思辨和浓烈情感。"
+        },
+        {
+            "label": "王家卫",
+            "value": 18,
+            "id": 8,
+            "categories": [
+              "person"
+            ],
+            "info": "传奇墨镜王。"
+        },
+        {
+            "label": "梁朝伟",
+            "value": 12,
+            "id": 9,
+            "categories": [
+              "person"
+            ],
+            "info": "御用男主。"
+        },
+        {
+            "label": "王菲",
+            "value": 12,
+            "id": 10,
+            "categories": [
+              "person"
+            ],
+            "info": "古灵精怪。"
+        }
+        
+        
+      ],
+      "edges": [{
+          "id": 111,
+          "label": "制作",
+          "from": 8,
+          "to": 1
+        },
+        {
+          "id": 112,
+          "label": "制作",
+          "from": 8,
+          "to": 2
+        },
+        {
+          "id": 113,
+          "label": "制作",
+          "from": 8,
+          "to": 3
+        },
+        {
+          "id": 114,
+          "label": "制作",
+          "from": 8,
+          "to": 4
+        },
+        {
+          "id": 115,
+          "label": "饰演",
+          "from": 9,
+          "to": 1
+        },
+        {
+          "id": 116,
+          "label": "饰演",
+          "from": 10,
+          "to": 1
+        }
+      ]
+    }
+  }
