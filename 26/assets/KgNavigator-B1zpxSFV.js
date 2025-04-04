@@ -1,0 +1,1 @@
+import{_ as r,c as a,o as t,a as o}from"./index-DIGq4D8a.js";const c={data(){return{iframeSrc:"./kgshow/GraphNavigator.html"}}},s={class:"iframe-container"},n=["src"];function i(_,f,d,m,e,p){return t(),a("div",s,[o("iframe",{src:e.iframeSrc,frameborder:"0",width:"100%",height:"100%"},null,8,n)])}const l=r(c,[["render",i],["__scopeId","data-v-68b8ff6c"]]);export{l as default};
