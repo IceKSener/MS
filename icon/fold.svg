@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 1964 1963" width="100%" height="100%" overflow="hidden">
+   <defs>
+   <mask id="mask">
+      <rect width="100%" height="100%" fill="white"/>
+      <path class="turn" stroke="black" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="150" d="m982 926 632 791h-319l-313-391-313 391H350Z"/>
+   </mask>
+   </defs>
+   <g fill="#393C45">
+   <path d="M287 1174h1390v203H287zM287 786h1390v203H287zM287 398h1390v203H287z" style="mask:url(#mask)"/>
+   <path class="turn" d="m982 982 562 702h-284l-278-347-278 347H420Z"/>
+   </g>
+</svg>
