@@ -1,4 +1,4 @@
-import{_ as E,g as A,r as j,f as w,h as I,i as W,c as T,o as h,a as g,w as C,j as q,F as z,k as P,n as m,e as H,v as b,u as t,t as v,l as S,m as x}from"./index-DIGq4D8a.js";const F=""+new URL("../icon/fold2.svg",import.meta.url).href,O=`# API文档\r
+import{_ as q,g as A,r as j,f as E,h as D,i as I,c as T,o as h,a as g,w as C,j as W,F as z,k as b,n as m,e as H,v as P,u as t,t as v,l as S,m as x}from"./index-D_ng5PBe.js";const F=""+new URL("../icon/fold2.svg",import.meta.url).href,O=`# API文档\r
 \r
 ## 核心接口\r
 \r
@@ -6,7 +6,7 @@ import{_ as E,g as A,r as j,f as w,h as I,i as W,c as T,o as h,a as g,w as C,j a
 \r
 #### 功能描述\r
 \r
-​	通过调用模型（如 Dashscope）生成聊天响应，并支持流式返回。用户发送问题后，系统会逐步返回生成的片段，直到最终完整的回答生成并标记为 \`final: true\`。\r
+​	通过调用模型生成聊天响应，并支持流式返回。用户发送问题后，系统会逐步返回生成的片段，直到最终完整的回答生成并标记为 \`final: true\`。\r
 \r
 #### 请求头\r
 \r
@@ -18,7 +18,7 @@ import{_ as E,g as A,r as j,f as w,h as I,i as W,c as T,o as h,a as g,w as C,j a
 \r
 | 参数名称    | 类型    | 必填 | 默认值 | 描述                                                         |\r
 | ----------- | ------- | ---- | ------ | ------------------------------------------------------------ |\r
-| model       | string  | 是   | 无     | 使用的模型名称，如 GPT-3、Dashscope 等。                     |\r
+| model       | string  | 是   | 无     | 使用的模型名称，如  qwen2.5-math-7b-instruct 等。            |\r
 | messages    | array   | 是   | 无     | 包含消息内容的列表，每个消息为字典格式，必须包含 \`role\`（用户/助手）和 \`content\`（消息内容）。 |\r
 | max_tokens  | integer | 否   | 1000   | 最大 token 数，控制回答的最大长度。                          |\r
 | temperature | float   | 否   | 1.0    | 控制生成文本的随机性，值越高越随机。                         |\r
@@ -28,12 +28,12 @@ import{_ as E,g as A,r as j,f as w,h as I,i as W,c as T,o as h,a as g,w as C,j a
 \r
 \`\`\`http\r
 POST /v1/chat/completions HTTP/1.1\r
-Host: api.example.com\r
+Host: 36.111.156.150:8000\r
 Authorization: Bearer <your_token>\r
 Content-Type: application/json\r
 \r
 {\r
-  "model": "dashscope-v1",\r
+  "model": "qwen2.5-math-7b-instruct",\r
   "messages": [\r
     {"role": "user", "content": "What is the capital of France?"}\r
   ],\r
@@ -52,7 +52,7 @@ Content-Type: application/json\r
   "id": "unique_response_id",\r
   "object": "text_completion",\r
   "created": 1640995200,\r
-  "model": "dashscope-v1",\r
+  "model": "qwen2.5-math-7b-instruct",\r
   "choices": [\r
     {\r
       "message": {\r
@@ -1254,4 +1254,4 @@ Content-Type: image/jpeg\r
 \r
 \r
 - **IntegrityError**: 在数据库操作中出现完整性错误（如唯一约束冲突时），会回滚事务并抛出错误信息。\r
-`,M=["onClick"],U=["onClick"],K={__name:"DevDoc",setup(N){let D=A().proxy.config.settings,u=A().proxy.screen,l=j([]),i=null,p=j([]),d=w(!1);function f(o,e){if(o.localName==="h2"&&u.type==="hor"){p[e]=!p[e];return}o.scrollIntoView(),u.type==="ver"&&i.scrollBy(0,-200)}function y(){const o=i.scrollHeight,e=i.scrollTop,n=u.height;let r=l.map(s=>parseInt(s.dom.offsetTop-e));r.push(parseInt(o-e)),l.forEach((s,a)=>{r[a]<0&&r[a+1]<=0||r[a]>=n&&r[a+1]>n?s.inSight=!1:s.inSight=!0;let c=s.items.map(_=>parseInt(_.dom.offsetTop-e));c.push(parseInt(r[a+1])),s.items.forEach((_,k)=>{c[k]<0&&c[k+1]<=0||c[k]>=n&&c[k+1]>n?_.inSight=!1:_.inSight=!0})})}function B(){if(!i)return;l.length=0;let o=[];i.querySelectorAll("h2").forEach(n=>o.push(n)),i.querySelectorAll("h3").forEach(n=>o.push(n)),o.sort((n,r)=>n.getAttribute("data-line")-r.getAttribute("data-line"));let e=null;o.forEach((n,r)=>{p[r]===void 0&&(p[r]=!0),n.localName==="h2"?(e!==null&&l.push(e),e={title:n.innerText,dom:n,inSight:!1,items:[]}):n.localName==="h3"&&e.items.push({title:n.innerText,dom:n,inSight:!1})}),l.push(e),y()}return I(()=>{i=document.getElementsByClassName("md-editor-preview-wrapper")[0],i.addEventListener("scroll",y),B()}),(o,e)=>{const n=W("Markdown");return h(),T("div",{class:m(["area",t(u).type])},[g("div",{class:m(["menu",{active:t(d)}])},[(h(!0),T(z,null,P(t(l),(r,s)=>(h(),T("div",null,[g("div",{class:m(["class","buttonEffect",{active:r.inSight}]),onClick:a=>f(r.dom,s)},[C(g("img",{class:m(["icon",{folded:t(p)[s]}]),src:F,alt:">"},null,2),[[b,t(u).type==="hor"]]),H(" "+v(r.title),1)],10,M),g("div",{class:m(["folder",{folded:t(p)[s]&&t(u).type==="hor"}])},[(h(!0),T(z,null,P(r.items,a=>(h(),T("div",{class:m(["item","buttonEffect",{active:a.inSight}]),onClick:c=>f(a.dom)},v(a.title),11,U))),256))],2)]))),256))],2),C(g("img",{class:"menuButton buttonEffect",src:S,onClick:e[0]||(e[0]=r=>x(d)?d.value=!t(d):d=!t(d))},null,512),[[b,t(u).type==="ver"]]),q(n,{class:"md",md:t(O),theme:t(D).theme,onOnHtmlChanged:B},null,8,["md","theme"])],2)}}},R=E(K,[["__scopeId","data-v-d7179e09"]]);export{R as default};
+`,M=["onClick"],U=["onClick"],K={__name:"DevDoc",setup(N){let w=A().proxy.config.settings,u=A().proxy.screen,l=j([]),i=null,p=j([]),d=E(!1);function f(o,e){if(o.localName==="h2"&&u.type==="hor"){p[e]=!p[e];return}o.scrollIntoView(),u.type==="ver"&&i.scrollBy(0,-200)}function y(){const o=i.scrollHeight,e=i.scrollTop,n=u.height;let r=l.map(s=>parseInt(s.dom.offsetTop-e));r.push(parseInt(o-e)),l.forEach((s,a)=>{r[a]<0&&r[a+1]<=0||r[a]>=n&&r[a+1]>n?s.inSight=!1:s.inSight=!0;let c=s.items.map(_=>parseInt(_.dom.offsetTop-e));c.push(parseInt(r[a+1])),s.items.forEach((_,k)=>{c[k]<0&&c[k+1]<=0||c[k]>=n&&c[k+1]>n?_.inSight=!1:_.inSight=!0})})}function B(){if(!i)return;l.length=0;let o=[];i.querySelectorAll("h2").forEach(n=>o.push(n)),i.querySelectorAll("h3").forEach(n=>o.push(n)),o.sort((n,r)=>n.getAttribute("data-line")-r.getAttribute("data-line"));let e=null;o.forEach((n,r)=>{p[r]===void 0&&(p[r]=!0),n.localName==="h2"?(e!==null&&l.push(e),e={title:n.innerText,dom:n,inSight:!1,items:[]}):n.localName==="h3"&&e.items.push({title:n.innerText,dom:n,inSight:!1})}),l.push(e),y()}return D(()=>{i=document.getElementsByClassName("md-editor-preview-wrapper")[0],i.addEventListener("scroll",y),B()}),(o,e)=>{const n=I("Markdown");return h(),T("div",{class:m(["area",t(u).type])},[g("div",{class:m(["menu",{active:t(d)}])},[(h(!0),T(z,null,b(t(l),(r,s)=>(h(),T("div",null,[g("div",{class:m(["class","buttonEffect",{active:r.inSight}]),onClick:a=>f(r.dom,s)},[C(g("img",{class:m(["icon",{folded:t(p)[s]}]),src:F,alt:">"},null,2),[[P,t(u).type==="hor"]]),H(" "+v(r.title),1)],10,M),g("div",{class:m(["folder",{folded:t(p)[s]&&t(u).type==="hor"}])},[(h(!0),T(z,null,b(r.items,a=>(h(),T("div",{class:m(["item","buttonEffect",{active:a.inSight}]),onClick:c=>f(a.dom)},v(a.title),11,U))),256))],2)]))),256))],2),C(g("img",{class:"menuButton buttonEffect",src:S,onClick:e[0]||(e[0]=r=>x(d)?d.value=!t(d):d=!t(d))},null,512),[[P,t(u).type==="ver"]]),W(n,{class:"md",md:t(O),theme:t(w).theme,onOnHtmlChanged:B},null,8,["md","theme"])],2)}}},R=q(K,[["__scopeId","data-v-d7179e09"]]);export{R as default};
