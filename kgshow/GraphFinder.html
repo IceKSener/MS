@@ -31,13 +31,10 @@
     <script type="text/javascript">
         igraph.i18n.setLanguage("chs");
         var app = new igraph.RelFinder(document.getElementById('graphArea'),'LIGHT');
-        app.loadGson("test.json", {}, function () {
-            app.pickup([{
-                label: "王家卫"
-            }, {
-                label: "梁朝伟"
-            }]);
-        });
+        app.connect("http://36.111.156.150:8080/ig-neo4j/connector-neodb");
+        app.connect("http://36.111.156.150:8080/ig-neo4j/connector-bolt");
+        // app.loadGson("test.json", {}, function () {
+        
 
     </script>
 </body>

@@ -37,26 +37,28 @@
     <script type="text/javascript">
         igraph.i18n.setLanguage("chs");
         var app = new igraph.GraphNavigator(document.getElementById('graphArea'), 'LIGHT');
-        app.loadGson("test.json", {
-            "onGetNodeDescription": function (node) {
-                //节点信息描述
-                console.log(node)
-                var description = "<p align=center>";
-                if (node.image !== undefined) {
-                    description += "<img src='" + node.image + "' width=150/><br>";
-                }
-                description += "<b>" + node.label + "</b>" + "[" + node.id + "]";
-                description += "</p>";
-                if (node.info !== undefined) {
-                    description += "<p align=left>" + node.info + "</p>";
-                } else {
-                    if (node.title !== undefined)
-                        description += "<p align=left>" + node.title + "</p>";
-                }
+        app.connect("http://36.111.156.150:8080/ig-neo4j/connector-neodb");
+        app.connect("http://36.111.156.150:8080/ig-neo4j/connector-bolt");
+        // app.loadGson("test.json", {
+        //     "onGetNodeDescription": function (node) {
+        //         //节点信息描述
+        //         console.log(node)
+        //         var description = "<p align=center>";
+        //         if (node.image !== undefined) {
+        //             description += "<img src='" + node.image + "' width=150/><br>";
+        //         }
+        //         description += "<b>" + node.label + "</b>" + "[" + node.id + "]";
+        //         description += "</p>";
+        //         if (node.info !== undefined) {
+        //             description += "<p align=left>" + node.info + "</p>";
+        //         } else {
+        //             if (node.title !== undefined)
+        //                 description += "<p align=left>" + node.title + "</p>";
+        //         }
 
-                return description;
-            }
-        }, function () {});
+        //         return description;
+        //     }
+        // }, function () {});
     </script>
 </body>
 
