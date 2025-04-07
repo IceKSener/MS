@@ -1,4 +1,4 @@
-import{_ as q,g as A,r as j,e as E,f as D,h as I,c as T,o as h,i as g,w as C,j as W,F as z,k as b,n as m,l as H,v as P,u as t,t as v,m as S,p as x,q as F}from"./index-B1kJ9ioP.js";const O=""+new URL("../icon/fold2.svg",import.meta.url).href,M=`# API文档\r
+import{_ as q,g as A,r as j,e as E,f as D,h as I,c as T,o as h,i as g,w as C,j as W,F as z,k as b,n as m,l as H,v as P,u as t,t as v,m as S,p as x,q as F}from"./index-B8E47wO-.js";const O=""+new URL("../icon/fold2.svg",import.meta.url).href,M=`# API文档\r
 \r
 ## 核心接口\r
 \r
