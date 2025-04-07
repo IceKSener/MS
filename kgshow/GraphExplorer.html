@@ -39,13 +39,13 @@
     <script type="text/javascript">
         igraph.i18n.setLanguage("chs");
         var app = new igraph.GraphExplorer(document.getElementById('graphArea'),'LIGHT');
-        app.connect("http://36.111.156.150:8080/ig-neo4j/connector-neodb");
-        app.connect("http://36.111.156.150:8080/ig-neo4j/connector-bolt");
-        // app.loadGson("test.json", {}, function () {
-        //     app.pickup([{
-        //         label: "王家卫"
-        //     }]);
-        // });
+        // app.connect("http://36.111.156.150:8080/ig-neo4j/connector-neodb");
+        // app.connect("http://36.111.156.150:8080/ig-neo4j/connector-bolt");
+        app.loadGson("knowledges.json", {}, function () {
+            // app.pickup([{
+            //     label: "几何"
+            // }]);
+        });
     </script>
 </body>
 
