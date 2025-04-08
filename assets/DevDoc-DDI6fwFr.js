@@ -1,4 +1,4 @@
-import{_ as q,g as A,r as j,e as E,f as D,h as I,c as T,o as h,i as g,w as C,j as W,F as z,k as b,n as m,l as H,v as P,u as t,t as v,m as S,p as x,q as F}from"./index-B8E47wO-.js";const O=""+new URL("../icon/fold2.svg",import.meta.url).href,M=`# API文档\r
+import{_ as $,g as A,r as b,e as q,f as v,h as D,c as g,o as T,i as _,w,j as W,F as C,k as z,n as m,l as H,v as j,u as t,t as P,m as S,p as I,q as x}from"./index-BScTtCZX.js";const F=""+new URL("../icon/fold2.svg",import.meta.url).href,O=`# API文档\r
 \r
 ## 核心接口\r
 \r
@@ -1114,6 +1114,387 @@ Content-Type: application/json\r
 | 401    | 未提供或无效的 Token |\r
 | 500    | 服务器内部错误       |\r
 \r
+## 知识管理\r
+\r
+### 获取内置知识库列表\r
+\r
+#### 功能描述\r
+\r
+获取内置知识库中的所有知识条目列表。\r
+\r
+#### 请求头\r
+\r
+| 参数名称      | 类型   | 必填 | 描述         |\r
+| ------------- | ------ | ---- | ------------ |\r
+| Authorization | string | 是   | Bearer Token |\r
+\r
+#### 请求方法\r
+\r
+GET\r
+\r
+#### 请求路径\r
+\r
+\`/knowledge/get_inner_knowledges\`\r
+\r
+#### 请求示例\r
+\r
+\`\`\`http\r
+GET /knowledge/get_inner_knowledges HTTP/1.1\r
+Authorization: Bearer <your_token>\r
+\`\`\`\r
+\r
+#### 成功响应\r
+\r
+**状态码**: 200  \r
+**响应体结构**:\r
+\r
+\`\`\`json\r
+{\r
+  "code": 200,\r
+  "message": "获取内部知识库列表成功!",\r
+  "data": [\r
+    	{\r
+            "id": 16,\r
+            "label": "定义",\r
+            "name": "三角形的定义",\r
+            "desc": "三角形是由三条线段首尾顺次连接组成的平面图形，是几何学中最基本的多边形。数学表达为：三个不共线的点A、B、C及其连线AB、BC、CA构成的图形，记作$\\\\triangle ABC$。",\r
+            "relation": "三角形"\r
+        },\r
+        {\r
+            "id": 17,\r
+            "label": "性质",\r
+            "name": "三角形的基本性质",\r
+            "desc": "1) 内角和为$180^{\\\\circ}$；2) 两边之和大于第三边；3) 外角和为$360^{\\\\circ}$；4) 大边对大角；5) 稳定性：三角形是刚性结构。",\r
+            "relation": "三角形"\r
+        }\r
+  ]\r
+}\r
+\`\`\`\r
+\r
+#### 失败响应\r
+\r
+| 状态码 | 描述                 |\r
+| ------ | -------------------- |\r
+| 401    | 未提供或无效的 Token |\r
+\r
+### 内置知识的模糊查询\r
+\r
+#### 功能描述\r
+\r
+根据名称部分匹配查询内置知识库中的知识条目。\r
+\r
+#### 请求头\r
+\r
+| 参数名称      | 类型   | 必填 | 描述         |\r
+| ------------- | ------ | ---- | ------------ |\r
+| Authorization | string | 是   | Bearer Token |\r
+\r
+#### 请求方法\r
+\r
+GET\r
+\r
+#### 请求路径\r
+\r
+\`/knowledge/query_inner_knowledge\`\r
+\r
+#### 请求参数（Query）\r
+\r
+| 参数名称  | 类型   | 必填 | 描述     |\r
+| --------- | ------ | ---- | -------- |\r
+| part_name | string | 是   | 名称部分 |\r
+\r
+#### 请求示例\r
+\r
+\`\`\`http\r
+GET /knowledge/query_inner_knowledge?part_name=三角形 HTTP/1.1\r
+Authorization: Bearer <your_token>\r
+\`\`\`\r
+\r
+#### 成功响应\r
+\r
+**状态码**: 200  \r
+**响应体结构**:\r
+\r
+\`\`\`json\r
+{\r
+  "code": 200,\r
+  "message": "获取内置指定知识成功!",\r
+  "data": [\r
+    	{\r
+            "id": 15,\r
+            "label": "virtual",\r
+            "name": "三角形",\r
+            "desc": "",\r
+            "relation": "平面几何图形"\r
+        },\r
+        {\r
+            "id": 16,\r
+            "label": "定义",\r
+            "name": "三角形的定义",\r
+            "desc": "三角形是由三条线段首尾顺次连接组成的平面图形，是几何学中最基本的多边形。数学表达为：三个不共线的点A、B、C及其连线AB、BC、CA构成的图形，记作$\\\\triangle ABC$。",\r
+            "relation": "三角形"\r
+        },\r
+        {\r
+            "id": 17,\r
+            "label": "性质",\r
+            "name": "三角形的基本性质",\r
+            "desc": "1) 内角和为$180^{\\\\circ}$；2) 两边之和大于第三边；3) 外角和为$360^{\\\\circ}$；4) 大边对大角；5) 稳定性：三角形是刚性结构。",\r
+            "relation": "三角形"\r
+        },\r
+        {\r
+            "id": 18,\r
+            "label": "应用",\r
+            "name": "三角形的应用",\r
+            "desc": "1) 建筑结构：桁架、屋顶设计；2) 工程测量：三角定位法；3) 计算机图形学：三维建模基础；4) 艺术设计：构图基本元素；5) 物理：力的分解与合成。",\r
+            "relation": "三角形"\r
+        },\r
+        {\r
+            "id": 19,\r
+            "label": "解题技巧",\r
+            "name": "三角形问题的解法",\r
+            "desc": "1) 角度问题：利用内角和定理；2) 边长问题：运用三角不等式；3) 证明技巧：添加辅助线构造全等/相似三角形；4) 坐标系法：通过顶点坐标计算；5) 综合运用：结合圆、四边形等知识。",\r
+            "relation": "三角形"\r
+        }\r
+  ]\r
+}\r
+\`\`\`\r
+\r
+#### 失败响应\r
+\r
+| 状态码 | 描述                 |\r
+| ------ | -------------------- |\r
+| 401    | 未提供或无效的 Token |\r
+\r
+### 获取用户知识库列表\r
+\r
+#### 功能描述\r
+\r
+获取当前用户知识库中的所有知识条目列表。\r
+\r
+#### 请求头\r
+\r
+| 参数名称      | 类型   | 必填 | 描述         |\r
+| ------------- | ------ | ---- | ------------ |\r
+| Authorization | string | 是   | Bearer Token |\r
+\r
+#### 请求方法\r
+\r
+GET\r
+\r
+#### 请求路径\r
+\r
+\`/knowledge/get_user_knowledges\`\r
+\r
+#### 请求示例\r
+\r
+\`\`\`http\r
+GET /knowledge/get_user_knowledges HTTP/1.1\r
+Authorization: Bearer <your_token>\r
+\`\`\`\r
+\r
+#### 成功响应\r
+\r
+**状态码**: 200  \r
+**响应体结构**:\r
+\r
+\`\`\`json\r
+{\r
+  "code": 200,\r
+  "message": "获取用户知识库列表成功!",\r
+  "data": [\r
+    	{\r
+            "id": 2,\r
+            "label": "定义",\r
+            "name": "勾股定理的定义",\r
+            "desc": "勾股定理指出：在直角三角形中，两条直角边的平方和等于斜边的平方。数学表达式为：若直角边长为$a$和$b$，斜边长为$c$，则$a^2 + b^2 = c^2$。这是欧几里得几何中最著名的定理之一。",\r
+            "relation": "勾股定理"\r
+        }\r
+  ]\r
+}\r
+\`\`\`\r
+\r
+#### 失败响应\r
+\r
+| 状态码 | 描述                 |\r
+| ------ | -------------------- |\r
+| 401    | 未提供或无效的 Token |\r
+\r
+### 用户知识的模糊查询\r
+\r
+#### 功能描述\r
+\r
+根据名称部分匹配查询当前用户知识库中的知识条目。\r
+\r
+#### 请求头\r
+\r
+| 参数名称      | 类型   | 必填 | 描述         |\r
+| ------------- | ------ | ---- | ------------ |\r
+| Authorization | string | 是   | Bearer Token |\r
+\r
+#### 请求方法\r
+\r
+GET\r
+\r
+#### 请求路径\r
+\r
+\`/knowledge/query_user_knowledge\`\r
+\r
+#### 请求参数（Query）\r
+\r
+| 参数名称  | 类型   | 必填 | 描述     |\r
+| --------- | ------ | ---- | -------- |\r
+| part_name | string | 是   | 名称部分 |\r
+\r
+#### 请求示例\r
+\r
+\`\`\`http\r
+GET /knowledge/query_user_knowledge?part_name=勾股 HTTP/1.1\r
+Authorization: Bearer <your_token>\r
+\`\`\`\r
+\r
+#### 成功响应\r
+\r
+**状态码**: 200  \r
+**响应体结构**:\r
+\r
+\`\`\`json\r
+{\r
+  "code": 200,\r
+  "message": "获取用户指定知识成功!",\r
+  "data": [\r
+    	{\r
+            "id": 2,\r
+            "label": "定义",\r
+            "name": "勾股定理的定义",\r
+            "desc": "勾股定理指出：在直角三角形中，两条直角边的平方和等于斜边的平方。数学表达式为：若直角边长为$a$和$b$，斜边长为$c$，则$a^2 + b^2 = c^2$。这是欧几里得几何中最著名的定理之一。",\r
+            "relation": "勾股定理"\r
+        }\r
+  ]\r
+}\r
+\`\`\`\r
+\r
+#### 失败响应\r
+\r
+| 状态码 | 描述                 |\r
+| ------ | -------------------- |\r
+| 401    | 未提供或无效的 Token |\r
+\r
+### 删除知识\r
+\r
+#### 功能描述\r
+\r
+删除用户知识库中的指定知识条目。\r
+\r
+#### 请求头\r
+\r
+| 参数名称      | 类型   | 必填 | 描述         |\r
+| ------------- | ------ | ---- | ------------ |\r
+| Authorization | string | 是   | Bearer Token |\r
+\r
+#### 请求方法\r
+\r
+DELETE\r
+\r
+#### 请求路径\r
+\r
+\`/knowledge/del_knowledge/{knowledge_id}\`\r
+\r
+#### 请求参数（Path）\r
+\r
+| 参数名称     | 类型 | 必填 | 描述    |\r
+| ------------ | ---- | ---- | ------- |\r
+| knowledge_id | int  | 是   | 知识 ID |\r
+\r
+#### 请求示例\r
+\r
+\`\`\`http\r
+DELETE /knowledge/del_knowledge/2 HTTP/1.1\r
+Authorization: Bearer <your_token>\r
+\`\`\`\r
+\r
+#### 成功响应\r
+\r
+**状态码**: 200  \r
+**响应体结构**:\r
+\r
+\`\`\`json\r
+{\r
+  "code": 200,\r
+  "message": "删除知识成功!",\r
+  "data": null\r
+}\r
+\`\`\`\r
+\r
+#### 失败响应\r
+\r
+| 状态码 | 描述                 |\r
+| ------ | -------------------- |\r
+| 401    | 未提供或无效的 Token |\r
+| 400    | 无效的知识 ID        |\r
+\r
+### 上传知识（JSONL格式）\r
+\r
+#### 功能描述\r
+\r
+通过上传JSONL格式文件批量添加知识到用户知识库。\r
+\r
+#### 请求头\r
+\r
+| 参数名称      | 类型   | 必填 | 描述                |\r
+| ------------- | ------ | ---- | ------------------- |\r
+| Authorization | string | 是   | Bearer Token        |\r
+| Content-Type  | string | 是   | multipart/form-data |\r
+\r
+#### 请求方法\r
+\r
+POST\r
+\r
+#### 请求路径\r
+\r
+\`/knowledge/upload_jsonl_knowledges\`\r
+\r
+#### 请求参数（Form）\r
+\r
+| 参数名称 | 类型 | 必填 | 描述      |\r
+| -------- | ---- | ---- | --------- |\r
+| file     | file | 是   | JSONL文件 |\r
+\r
+#### 请求示例\r
+\r
+\`\`\`http\r
+POST /knowledge/upload_jsonl_knowledges HTTP/1.1\r
+Authorization: Bearer <your_token>\r
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW\r
+\r
+------WebKitFormBoundary7MA4YWxkTrZu0gW\r
+Content-Disposition: form-data; name="file"; filename="knowledge.jsonl"\r
+Content-Type: application/octet-stream\r
+\r
+[文件内容]\r
+{"id": 75, "label": "virtual", "name": "勾股定理", "desc": "", "relation": "直角三角形"}\r
+{"id": 76, "label": "定义", "name": "勾股定理的定义", "desc": "勾股定理指出：在直角三角形中，两条直角边的平方和等于斜边的平方。数学表达式为：若直角边长为$a$和$b$，斜边长为$c$，则$a^2 + b^2 = c^2$。这是欧几里得几何中最著名的定理之一。", "relation": "勾股定理"}\r
+\`\`\`\r
+\r
+#### 成功响应\r
+\r
+**状态码**: 201  \r
+**响应体结构**:\r
+\r
+\`\`\`json\r
+{\r
+    "code": 201,\r
+    "message": "新增知识成功!",\r
+    "data": null\r
+}\r
+\`\`\`\r
+\r
+#### 失败响应\r
+\r
+| 状态码 | 描述                 |\r
+| ------ | -------------------- |\r
+| 401    | 未提供或无效的 Token |\r
+| 400    | 文件格式错误         |\r
+\r
 ## 多模态输入\r
 \r
 ### 音频识别文字\r
@@ -1253,5 +1634,4 @@ Content-Type: image/jpeg\r
   \`\`\`\r
 \r
 \r
-- **IntegrityError**: 在数据库操作中出现完整性错误（如唯一约束冲突时），会回滚事务并抛出错误信息。\r
-`,U=["onClick"],K=["onClick"],N={__name:"DevDoc",setup(L){let w=A().proxy.config.settings,u=A().proxy.screen,l=j([]),i=null,p=j([]),d=E(!1);function f(o,e){if(o.localName==="h2"&&u.type==="hor"){p[e]=!p[e];return}o.scrollIntoView(),u.type==="ver"&&i.scrollBy(0,-200)}function y(){const o=i.scrollHeight,e=i.scrollTop,n=u.height;let r=l.map(s=>parseInt(s.dom.offsetTop-e));r.push(parseInt(o-e)),l.forEach((s,a)=>{r[a]<0&&r[a+1]<=0||r[a]>=n&&r[a+1]>n?s.inSight=!1:s.inSight=!0;let c=s.items.map(_=>parseInt(_.dom.offsetTop-e));c.push(parseInt(r[a+1])),s.items.forEach((_,k)=>{c[k]<0&&c[k+1]<=0||c[k]>=n&&c[k+1]>n?_.inSight=!1:_.inSight=!0})})}function B(){F(()=>{if(!i)return;l.length=0;let o=[];i.querySelectorAll("h2").forEach(n=>o.push(n)),i.querySelectorAll("h3").forEach(n=>o.push(n)),o.sort((n,r)=>n.getAttribute("data-line")-r.getAttribute("data-line"));let e=null;o.forEach((n,r)=>{p[r]===void 0&&(p[r]=!0),n.localName==="h2"?(e!==null&&l.push(e),e={title:n.innerText,dom:n,inSight:!1,items:[]}):n.localName==="h3"&&e.items.push({title:n.innerText,dom:n,inSight:!1})}),l.push(e),y()})}return D(()=>{i=document.getElementsByClassName("md-editor-preview-wrapper")[0],i.addEventListener("scroll",y),B()}),(o,e)=>{const n=I("Markdown");return h(),T("div",{class:m(["area",t(u).type])},[g("div",{class:m(["menu",{active:t(d)}])},[(h(!0),T(z,null,b(t(l),(r,s)=>(h(),T("div",null,[g("div",{class:m(["class","buttonEffect",{active:r.inSight}]),onClick:a=>f(r.dom,s)},[C(g("img",{class:m(["icon",{folded:t(p)[s]}]),src:O,alt:">"},null,2),[[P,t(u).type==="hor"]]),H(" "+v(r.title),1)],10,U),g("div",{class:m(["folder",{folded:t(p)[s]&&t(u).type==="hor"}])},[(h(!0),T(z,null,b(r.items,a=>(h(),T("div",{class:m(["item","buttonEffect",{active:a.inSight}]),onClick:c=>f(a.dom)},v(a.title),11,K))),256))],2)]))),256))],2),C(g("img",{class:"menuButton buttonEffect",src:S,onClick:e[0]||(e[0]=r=>x(d)?d.value=!t(d):d=!t(d))},null,512),[[P,t(u).type==="ver"]]),W(n,{class:"md",md:t(M),theme:t(w).theme,onOnHtmlChanged:B},null,8,["md","theme"])],2)}}},Y=q(N,[["__scopeId","data-v-cdfaf360"]]);export{Y as default};
+- **IntegrityError**: 在数据库操作中出现完整性错误（如唯一约束冲突时），会回滚事务并抛出错误信息。`,M=["onClick"],G=["onClick"],L={__name:"DevDoc",setup(N){let E=A().proxy.config.settings,l=A().proxy.screen,u=b([]),i=null,d=b([]),p=q(!1);function y(o,e){if(o.localName==="h2"&&l.type==="hor"){d[e]=!d[e];return}o.scrollIntoView(),l.type==="ver"&&i.scrollBy(0,-200)}function f(){const o=i.scrollHeight,e=i.scrollTop,n=l.height;let r=u.map(a=>parseInt(a.dom.offsetTop-e));r.push(parseInt(o-e)),u.forEach((a,s)=>{r[s]<0&&r[s+1]<=0||r[s]>=n&&r[s+1]>n?a.inSight=!1:a.inSight=!0;let c=a.items.map(h=>parseInt(h.dom.offsetTop-e));c.push(parseInt(r[s+1])),a.items.forEach((h,k)=>{c[k]<0&&c[k+1]<=0||c[k]>=n&&c[k+1]>n?h.inSight=!1:h.inSight=!0})})}function B(){x(()=>{if(!i)return;u.length=0;let o=[];i.querySelectorAll("h2").forEach(n=>o.push(n)),i.querySelectorAll("h3").forEach(n=>o.push(n)),o.sort((n,r)=>n.getAttribute("data-line")-r.getAttribute("data-line"));let e=null;o.forEach((n,r)=>{d[r]===void 0&&(d[r]=!0),n.localName==="h2"?(e!==null&&u.push(e),e={title:n.innerText,dom:n,inSight:!1,items:[]}):n.localName==="h3"&&e.items.push({title:n.innerText,dom:n,inSight:!1})}),u.push(e),f()})}return v(()=>{i=document.getElementsByClassName("md-editor-preview-wrapper")[0],i.addEventListener("scroll",f),B()}),(o,e)=>{const n=D("Markdown");return T(),g("div",{class:m(["area",t(l).type])},[_("div",{class:m(["menu",{active:t(p)}])},[(T(!0),g(C,null,z(t(u),(r,a)=>(T(),g("div",null,[_("div",{class:m(["class","buttonEffect",{active:r.inSight}]),onClick:s=>y(r.dom,a)},[w(_("img",{class:m(["icon",{folded:t(d)[a]}]),src:F,alt:">"},null,2),[[j,t(l).type==="hor"]]),H(" "+P(r.title),1)],10,M),_("div",{class:m(["folder",{folded:t(d)[a]&&t(l).type==="hor"}])},[(T(!0),g(C,null,z(r.items,s=>(T(),g("div",{class:m(["item","buttonEffect",{active:s.inSight}]),onClick:c=>y(s.dom)},P(s.title),11,G))),256))],2)]))),256))],2),w(_("img",{class:"menuButton buttonEffect",src:S,onClick:e[0]||(e[0]=r=>I(p)?p.value=!t(p):p=!t(p))},null,512),[[j,t(l).type==="ver"]]),W(n,{class:"md",md:t(O),theme:t(E).theme,onOnHtmlChanged:B},null,8,["md","theme"])],2)}}},U=$(L,[["__scopeId","data-v-cdfaf360"]]);export{U as default};
