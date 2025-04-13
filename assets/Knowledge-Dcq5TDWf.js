@@ -1,10 +1,10 @@
-import{g as I,h as j,c as u,o as c,j as B,u as E,_ as M,e as f,r as U,s as $,x as z,w as v,i as e,v as k,l as T,y as G,z as H,A as N,B as R,F,k as D,t as x,C as Z,D as K,E as q,m as J,n as L,G as Q,K as W}from"./index-3nldG4oF.js";const X=`# 知识库上传说明\r
+import{g as I,h as j,c as u,o as c,j as B,u as E,_ as M,e as f,r as U,s as $,x as z,w as v,i as e,v as k,l as T,y as G,z as H,A as N,B as R,F,k as D,t as x,C as Z,D as K,E as q,m as J,n as L,G as Q,K as W}from"./index-Cxcqj-kr.js";const X=`# 知识库上传说明\r
 \r
 1.上传文件的格式必须为jsonl格式。\r
 \r
 2.文件内知识格式要求\r
 \r
-​	①文件中每一条知识占用一条json；每一个知识概念占用2~5个json；如“一元二次方程”这一知识概念占用5个json的示例如下：\r
+​	①文件中每一条知识占用一条json；每一个知识概念占用5个json；如“一元二次方程”这一知识概念占用5个json的示例如下：\r
 \r
 \`\`\`json\r
 {"id": 2096, "label": "virtual", "name": "一元二次方程", "desc": "", "relation": "方程"}\r
@@ -26,7 +26,7 @@ import{g as I,h as j,c as u,o as c,j as B,u as E,_ as M,e as f,r as U,s as $,x a
 \r
 ​	其中，id字段   \`非必须\`；label字段为virtual（规定）；desc字段为空字符串；relation字段的值为该知识概念的更高层次的知识概念，如“一元一次方程”的更高层次的知识概念为“方程”，其中，relation字段的值应确保在内置知识库中或用户知识库中能够查找到，否则知识概念的relation字段应该也为空字符串。\r
 \r
-​	③文件中每一个数学知识概念还应该至少包含label字段为“定义”、“性质”、“应用”、“解题技巧”中其一（最好全部包含）的知识属性文档。如：\r
+​	③文件中每一个数学知识概念还必须包含label字段为“定义”、“性质”、“应用”、“解题技巧”的知识属性文档，如：\r
 \r
 \`\`\`json\r
 {"id": 2097, "label": "定义", "name": "一元二次方程的定义", "desc": "形如$ax^2+bx+c=0$（$a\\\\neq 0$）的方程称为一元二次方程，其中$a$、$b$、$c$为常数，$x$为未知数。解这类方程需要运用求根公式或因式分解等方法。", "relation": "一元二次方程"}\r
