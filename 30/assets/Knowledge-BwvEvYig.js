@@ -1,4 +1,4 @@
-import{g as I,h as j,c as p,o as c,j as B,u as E,_ as M,e as f,r as U,s as $,x as z,w as x,i as e,v as k,l as T,y as G,z as H,A as N,B as R,F,k as D,t as v,C as Z,D as K,E as q,m as J,n as L,G as Q,K as W}from"./index-sFl1wKch.js";const X=`# 知识库上传说明\r
+import{g as I,h as j,c as p,o as c,j as B,u as E,_ as M,e as f,r as U,s as $,x as z,w as x,i as e,v as k,l as T,y as G,z as H,A as N,B as R,F,k as D,t as v,C as Z,D as K,E as q,m as J,n as L,G as Q,K as W}from"./index-ifziYdtj.js";const X=`# 知识库上传说明\r
 \r
 1.上传文件的格式必须为jsonl格式。\r
 \r
